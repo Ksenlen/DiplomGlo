@@ -1,13 +1,11 @@
 import { animate } from "./helpers";
 
 const calc = (price = 1000) => {
-
     const calcType = document.getElementById("calc-type");
     const calcArea = document.getElementById("calc-input");
     const calcMaterial = document.getElementById("calc-type-material");
     const calcTotal = document.getElementById("calc-total");
     const calcBlock = document.getElementById("calc");
-
 
     const countCalc = () => {
         const calcTypeValue = +calcType.options[calcType.selectedIndex].value;
