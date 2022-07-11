@@ -1,7 +1,6 @@
 import { animate } from "./helpers";
 
 const calc = (price = 1000) => {
-    console.log('123');
 
     const calcType = document.getElementById("calc-type");
     const calcArea = document.getElementById("calc-input");
