@@ -7,9 +7,12 @@ const smoothScroll = () => {
     let windowScrollTop = window.scrollY;
 
     let scrollHeight = header.clientHeight + navigation.clientHeight + offer.clientHeight;
-    console.log(scrollHeight);
+
     if (windowScrollTop > scrollHeight) {
         scroll.style.opacity = 1;
+    }
+    if (windowScrollTop < scrollHeight) {
+        scroll.style.opacity = 0;
     }
 
     window.addEventListener("scroll", (e) => {
