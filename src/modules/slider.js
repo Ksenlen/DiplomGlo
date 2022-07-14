@@ -1,7 +1,7 @@
 import Swiper, { Autoplay, Navigation } from 'swiper';
 
 const slider = () => {
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('.swiper-row', {
         slidesPerView: 1,
         spaceBetween: 10,
         breakpoints: {
