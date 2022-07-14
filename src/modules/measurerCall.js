@@ -1,6 +1,5 @@
-import Swiper from "swiper";
 import { animate } from "./helpers";
-import slider from "./slider";
+
 
 const measurerCall = () => {
     const measurerCallBtn = document.querySelectorAll(".btn-sm");
