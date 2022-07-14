@@ -20,6 +20,17 @@ const slider = () => {
             nextEl: ".services__arrow--right",
             prevEl: ".services__arrow--left",
         },
+        on: {
+            init() {
+                this.el.addEventListener('mouseenter', () => {
+                    this.autoplay.stop();
+                });
+
+                this.el.addEventListener('mouseleave', () => {
+                    this.autoplay.start();
+                });
+            }
+        },
     });
 };
 
