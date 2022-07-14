@@ -1994,7 +1994,38 @@ input.error {
   }
 }
 
-.swiper {
-  width: 100%;
+.sertificate-modal {
   height: 100%;
+  width: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  display: none;
+  overflow: auto;
+  background-color: #84888f;
+}
+
+.sertificate-modal img {
+  width: auto;
+  height: 100%;
+
+}
+
+
+
+.sertificate-modal__close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 40px;
+  height: 50px;
+  font-size: 36px;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.sertificate-modal__close:hover {
+  color: rgba(0, 0, 0, 0.35);
 }
