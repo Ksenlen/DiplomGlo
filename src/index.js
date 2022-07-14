@@ -5,6 +5,8 @@ import slider from "./modules/slider";
 import swiperBenifits from "./modules/swiperBenifits";
 import diplomPage from "./modules/diplomPage";
 import requestCall from "./modules/requestCall";
+import measurerCall from "./modules/measurerCall";
+
 
 
 calc();
@@ -14,3 +16,4 @@ slider();
 swiperBenifits();
 diplomPage();
 requestCall();
+measurerCall();
