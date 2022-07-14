@@ -4,7 +4,7 @@ import smoothScroll from "./modules/smoothScroll";
 import slider from "./modules/slider";
 import swiperBenifits from "./modules/swiperBenifits";
 import diplomPage from "./modules/diplomPage";
-
+import requestCall from "./modules/requestCall";
 
 
 calc();
@@ -13,3 +13,4 @@ smoothScroll();
 slider();
 swiperBenifits();
 diplomPage();
+requestCall();
