@@ -6,6 +6,7 @@ import swiperBenifits from "./modules/swiperBenifits";
 import diplomPage from "./modules/diplomPage";
 import requestCall from "./modules/requestCall";
 import measurerCall from "./modules/measurerCall";
+import getValidation from "./modules/getValidation";
 
 
 
@@ -16,4 +17,67 @@ slider();
 swiperBenifits();
 diplomPage();
 requestCall();
-measurerCall(); 
+measurerCall();
+getValidation({
+    formID: "form1",
+    someElem: [
+        {
+            type: "block",
+            id: "calc-total",
+        },
+    ],
+});
+getValidation({
+    formID: "form2",
+    someElem: [
+        {
+            type: "block",
+            id: "calc-total",
+        },
+    ],
+});
+getValidation({
+    formID: "form3",
+    someElem: [
+        {
+            type: "block",
+            id: "calc-total",
+        },
+    ],
+});
+getValidation({
+    formID: "form4",
+    someElem: [
+        {
+            type: "block",
+            id: "calc-total",
+        },
+    ],
+});
+getValidation({
+    formID: "form5",
+    someElem: [
+        {
+            type: "block",
+            id: "calc-total",
+        },
+    ],
+});
+getValidation({
+    formID: "form6",
+    someElem: [
+        {
+            type: "block",
+            id: "calc-total",
+        },
+    ],
+});
+getValidation({
+    formID: "form7",
+    someElem: [
+        {
+            type: "block",
+            id: "calc-total",
+        },
+    ],
+});
