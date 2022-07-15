@@ -1,43 +1,43 @@
 const diplomPage = () => {
-    const sertificateDocuments = document.querySelectorAll(".sertificate-document");
+
+    const docImages = document.querySelectorAll('.sertificate-document');
     const body = document.querySelector('body');
 
     const clientWidth = body.clientWidth;
 
     let width = document.documentElement.clientWidth;
-
     window.addEventListener("resize", () => {
         width = document.documentElement.clientWidth;
     });
 
-    sertificateDocuments.forEach((sertificate) => {
-        const sertificateImg = sertificate.href;
-
-        sertificate.addEventListener("click", (e) => {
+    docImages.forEach(doc => {
+        doc.addEventListener('click', (e) => {
             e.preventDefault();
+
+            const modal = document.getElementById('myModal');
+            const modalImg = document.getElementById('img01');
+            const closeBtn = document.getElementsByClassName("doc-close")[0];
+
+
+            modalImg.src = doc.getAttribute('href');
+            modal.style.display = 'block';
+
             body.style.overflow = "hidden";
             let offsetWidth = body.offsetWidth;
             let scrollWidth = offsetWidth - clientWidth;
             body.style.paddingRight = scrollWidth + 'px';
-            let sertificateModal = document.createElement("div");
-            sertificateModal.className = "sertificate-modal";
-            sertificateModal.style.display = "block";
-            sertificateModal.innerHTML = `
-          <img src=${sertificateImg} alt="">
-          <span title="Close" class="sertificate-modal__close">x</span></div>`;
 
-            const documentsBlock = document.getElementById("documents");
-
-            documentsBlock.append(sertificateModal);
-
-            const closeBtn = document.querySelector(".sertificate-modal__close");
-            closeBtn.addEventListener("click", () => {
-                sertificateModal.remove();
-                body.style.overflow = "";
-                body.style.paddingRight = '';
+            modal.addEventListener('click', (event) => {
+                if (event.target === closeBtn || (!event.target.closest('doc-modal-content') && event.target !== modalImg)) {
+                    modal.style.display = 'none';
+                    body.style.overflow = "";
+                    body.style.paddingRight = "";
+                }
             });
         });
     });
 };
+
+
 
 export default diplomPage;
