@@ -55,5 +55,7 @@ const measurerCall = () => {
 
     servicesModalCloseBtn.addEventListener("click", hideServicesModal);
     modalFone.addEventListener("click", hideServicesModal);
+
+
 };
 export default measurerCall;

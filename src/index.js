@@ -16,4 +16,4 @@ slider();
 swiperBenifits();
 diplomPage();
 requestCall();
-measurerCall();
+measurerCall(); 
