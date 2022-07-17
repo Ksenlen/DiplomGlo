@@ -90,7 +90,6 @@ const getValidation = ({ formID, someElem = [] }) => {
                 .then((data) => {
                     statusBlock.textContent = successText;
                     formElements.forEach((input) => {
-                        console.dir(input);
                         if (!input.name == "page") {
                             input.value = "";
                         }
