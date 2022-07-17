@@ -1,7 +1,6 @@
 const getValidation = ({ formID, someElem = [] }) => {
     const form = document.getElementById(formID);
     const statusBlock = document.createElement("div");
-    const formElements = document.querySelectorAll("input");
     const userPhone = form.querySelector("input[name=phone]");
     const userName = form.querySelector("input[name=fio]");
     const total = document.getElementById("calc-total");
@@ -63,6 +62,7 @@ const getValidation = ({ formID, someElem = [] }) => {
     };
 
     const submitForm = () => {
+        const formElements = document.querySelectorAll("input");
         const formData = new FormData(form);
         const formBody = {};
         statusBlock.innerHTML = preload;
@@ -90,7 +90,10 @@ const getValidation = ({ formID, someElem = [] }) => {
                 .then((data) => {
                     statusBlock.textContent = successText;
                     formElements.forEach((input) => {
-                        input.value = "";
+                        console.dir(input);
+                        if (!input.name == "page") {
+                            input.value = "";
+                        }
                     });
 
                     setTimeout(() => {
