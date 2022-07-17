@@ -62,7 +62,7 @@ const getValidation = ({ formID, someElem = [] }) => {
     };
 
     const submitForm = () => {
-        const formElements = document.querySelectorAll("input");
+        const formElements = form.querySelectorAll("input");
         const formData = new FormData(form);
         const formBody = {};
         statusBlock.innerHTML = preload;
@@ -90,7 +90,7 @@ const getValidation = ({ formID, someElem = [] }) => {
                 .then((data) => {
                     statusBlock.textContent = successText;
                     formElements.forEach((input) => {
-                        if (!input.name == "page") {
+                        if (!(input.name === "page")) {
                             input.value = "";
                         }
                     });

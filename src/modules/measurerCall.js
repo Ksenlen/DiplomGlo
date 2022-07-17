@@ -16,7 +16,8 @@ const measurerCall = () => {
         width = document.documentElement.clientWidth;
     });
 
-
+    servicesModal.style.zIndex = "2";
+    modalFone.style.zIndex = "1";
     measurerCallBtn.forEach((element) => {
         element.addEventListener("click", (e) => {
             e.preventDefault();
