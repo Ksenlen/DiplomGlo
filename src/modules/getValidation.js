@@ -1,9 +1,15 @@
 const getValidation = ({ formID, someElem = [] }) => {
     const form = document.getElementById(formID);
+    const statusBlock = document.createElement("div");
     const formElements = document.querySelectorAll("input");
     const userPhone = form.querySelector("input[name=phone]");
     const userName = form.querySelector("input[name=fio]");
     const total = document.getElementById("calc-total");
+    const errorText = "Ошибка ...";
+    const preload = "Подождите, идёт загрузка ...";
+    const successText = "Наш менеджер с вами свяжется!";
+    const errorValidation = "Данные не валидны...";
+
 
     userPhone.addEventListener("input", (e) => {
         e.target.value = e.target.value.replace(/[^\+\d]+/, "");
@@ -59,6 +65,9 @@ const getValidation = ({ formID, someElem = [] }) => {
     const submitForm = () => {
         const formData = new FormData(form);
         const formBody = {};
+        statusBlock.innerHTML = preload;
+        statusBlock.style.color = 'gray';
+        form.append(statusBlock);
 
         formData.forEach((val, key) => {
             formBody[key] = val;
@@ -79,12 +88,17 @@ const getValidation = ({ formID, someElem = [] }) => {
         if (validate()) {
             sendData(formBody)
                 .then((data) => {
+                    statusBlock.textContent = successText;
                     formElements.forEach((input) => {
                         input.value = "";
                     });
+
+                    setTimeout(() => {
+                        statusBlock.textContent = '';
+                    }, 3000);
                 })
                 .catch((error) => {
-                    console.log("ошибка");
+                    statusBlock.textContent = errorText;
                 });
         } else {
             alert("неправильно заполнены данные");
@@ -100,15 +114,9 @@ const getValidation = ({ formID, someElem = [] }) => {
             e.preventDefault();
             if (validate()) {
                 submitForm();
-                alert("данные успешно отправлены");
+
             } else {
-                console.log("форма не отправлена");
-                alert(
-                    "Проверьте правильность ввода данных, в номере телефона можно вводить + и от 6 до 16 цифр, имя должно быть минимум 2 символа"
-                );
-                formElements.forEach((input) => {
-                    input.value = "";
-                });
+                statusBlock.textContent = errorValidation;
             }
         });
     } catch (error) {

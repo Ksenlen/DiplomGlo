@@ -24,6 +24,7 @@ getValidation({
         {
             type: "block",
             id: "calc-total",
+
         },
     ],
 });
@@ -33,6 +34,7 @@ getValidation({
         {
             type: "block",
             id: "calc-total",
+
         },
     ],
 });
@@ -42,6 +44,7 @@ getValidation({
         {
             type: "block",
             id: "calc-total",
+
         },
     ],
 });
@@ -51,6 +54,7 @@ getValidation({
         {
             type: "block",
             id: "calc-total",
+
         },
     ],
 });
@@ -60,6 +64,7 @@ getValidation({
         {
             type: "block",
             id: "calc-total",
+
         },
     ],
 });
@@ -69,6 +74,7 @@ getValidation({
         {
             type: "block",
             id: "calc-total",
+
         },
     ],
 });
@@ -78,6 +84,7 @@ getValidation({
         {
             type: "block",
             id: "calc-total",
+
         },
     ],
 });
