@@ -116,9 +116,8 @@ const getValidation = ({ formID, someElem = [] }) => {
             e.preventDefault();
             if (validate()) {
                 submitForm();
-
             } else {
-                statusBlock.textContent = errorValidation;
+                alert('Данные не валидны. Попробуйте еще раз');
             }
         });
     } catch (error) {
